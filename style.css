@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 100%;
+    
+}
+.hero-img{
+    max-width: 100%;
+    display: block; 
+}
+h1{
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+header{
+  padding: 10px 3%;
+  gap: 40px;
+  height: 80px;
+  
+}
+
+
+
+
+section{
+    width: 100%;
+    
+    padding-inline: 3%;
+    padding-bottom: 5rem;
+}
+
+
+
+.nav-list{
+list-style: none;
+}
+.nav-link{
+    text-decoration: none;
+    color:hsl(0, 0%, 41%);
+    font-size: 0.8rem;
+    width: 110px;
+    display: inline-block;
+}
+.nav-menu{
+    padding: 0;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    
+}
+.nav-menu,
+.nav-right{
+    
+    width: 200px;
+    
+    position:fixed;
+   right: -200px;
+ top:30px;
+height: 100vh;
+background-color: #fff;
+z-index:5;
+ 
+}
+.sub-menu ul{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+
+.sub-menu{
+    display: none;
+    
+    background-color: white;
+    color:hsl(0, 0%, 41%);
+    border: 1px solid red;
+   
+    box-shadow:0px 0px 10px 3px rgba(0, 0, 0, 0.75);
+    
+    }
+    .nav-list:hover .sub-menu {
+        display: block;
+        position: absolute;
+        
+    }
+    .nav-list:hover .sub-menu ul{
+        display: block;
+      padding-left: 10px;
+    }
+    .nav-list:hover .sub-menu li{
+        width: 150px;
+       
+        text-align: left;
+    }
+    .sub-menu li:hover{
+        color:black;
+    }
+    
+  
+
+.sub-menu img{
+    margin-right: 8px;
+}
+.nav-right{
+    top:300px;
+    font-size: 0.8rem;
+ display: flex;
+ flex-direction: column;
+   align-items: center;  
+   gap: 20px; 
+}
+.login{
+    margin-right: 30px;
+    color:hsl(0, 0%, 41%);
+    text-decoration: none;
+
+}
+.button{
+    color:hsl(0, 0%, 41%);
+    border: 2px solid hsl(0, 0%, 41%) ;
+    padding: 0.4em 0.8em;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    
+    
+}
+.nav-link:hover,
+.login:hover,
+.button:hover{
+    color:hsl(0, 0%, 8%);
+    border-color:hsl(0, 0%, 8%) ;
+}
+.btn-large{
+    color:#fff;
+    background-color:hsl(0, 0%, 8%) ;
+    font-size: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    border-color:hsl(0, 0%, 8%);
+}
+.btn-large:hover{
+    color:hsl(0, 0%, 8%);
+    background-color: #fff;
+}
+.flex{
+    display: flex;
+    
+    align-items: center;
+    
+    flex-direction: column-reverse;
+   
+    text-align: center;
+}
+.flex div{
+    flex:1 ;
+}
+.icons{
+    display: flex;
+    justify-content: space-between;
+   flex-wrap: wrap;
+   gap: 20px;
+}
+.burger{
+    border-radius: 50%;
+    
+
+}
+.line{
+    width: 34px;
+    height: 4px;
+    background-color: red;
+    margin: 5px 0;
+}
+.background{
+    background-color: hsl(0, 0%, 41%);
+    position: relative;
+    z-index: 2;
+}
+
+
+@media (min-width:850px){
+    .flex{
+        justify-content: center;
+        flex-direction: row;
+        text-align: initial;
+    }
+    .flex> div{
+        padding-inline: 8%; 
+    }
+    nav{
+        display: flex;
+        
+    justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+    }
+    .nav-menu{
+        display: flex;
+        gap: 40px;
+        flex-direction: row;
+        position: unset;
+        top: unset;
+        right: unset;
+        height: unset;
+    }
+    .nav-right{
+        position: unset;
+        align-items: center;
+        font-size: 0.8rem;
+      display: flex;
+      flex-direction: row;
+      top: unset;
+      height: unset;
+          
+    }
+    .nav-left{
+        display: flex;  
+        padding: 0;
+        gap: 40px;
+        align-items: center;
+        justify-content: center;
+        align-items: center;
+       
+       }
+       .burger{
+        display: none;
+       }
+       .background{
+        background-color: unset;}
+      
+}
+.burger{
+    position: absolute;
+    top: 10px;
+    right: 8px;
+   }
+   .burger .nav-visible .line:nth-child(2){
+    opacity: 0;
+    
+}
+.burger .nav-visible .line:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+  }
+.burger  .nav-visible .line:nth-child(3){
+    transform: translateY(-12px) rotate(-45deg); 
+    
+}
+  
+  
+    .nav-position{
+        
+        right:2px;}
+    
+        .nav-visible{
+       
+            
+            
+    
+        }
+        
